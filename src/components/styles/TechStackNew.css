@@ -1,0 +1,126 @@
+.techstack-new {
+  width: 100%;
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0 80px 0;
+  box-sizing: border-box;
+}
+
+.techstack-glow-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(196, 129, 255, 0.08) 0%, rgba(85, 0, 255, 0.03) 50%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.techstack-content {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.techstack-content h2 {
+  font-size: 55px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.techstack-content h2 span {
+  color: var(--accentColor, #c481ff);
+}
+
+.techstack-pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.techstack-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.techstack-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 30px;
+  color: #e5e0eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.techstack-item img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.techstack-item:hover {
+  transform: translateY(-4px) scale(1.04);
+  border-color: var(--accentColor, #c481ff);
+  background: rgba(196, 129, 255, 0.14);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(196, 129, 255, 0.25);
+}
+
+.techstack-item:hover img {
+  transform: scale(1.15) rotate(5deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .techstack-new {
+    padding: 60px 15px 40px 15px;
+    min-height: auto;
+  }
+  .techstack-content h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  .techstack-pyramid {
+    gap: 10px;
+  }
+  .techstack-row {
+    gap: 8px;
+  }
+  .techstack-item {
+    padding: 7px 14px;
+    font-size: 12px;
+    gap: 6px;
+  }
+  .techstack-item img {
+    width: 16px;
+    height: 16px;
+  }
+}

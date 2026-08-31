@@ -1,0 +1,259 @@
+.cv-section {
+  width: 100%;
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  padding: 100px 0 80px 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cv-container {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+}
+
+.cv-header {
+  margin-bottom: 45px;
+}
+
+.cv-header h2 {
+  font-size: 55px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  letter-spacing: 1px;
+}
+
+.cv-header h2 span {
+  color: var(--accentColor, #c481ff);
+}
+
+.cv-header p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 16px;
+  margin: 0;
+  max-width: 600px;
+}
+
+/* Two-column layout: CV 68% / Photo 32% */
+.cv-layout {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+}
+
+.cv-left-col {
+  flex: 0 0 66%;
+  max-width: 66%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cv-right-col {
+  flex: 0 0 calc(34% - 36px);
+  max-width: calc(34% - 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Action Buttons below preview */
+.cv-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.cv-btn-primary {
+  background: var(--accentColor, #c481ff);
+  color: #0b080c;
+  box-shadow: 0 6px 22px rgba(196, 129, 255, 0.35);
+}
+
+.cv-btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(196, 129, 255, 0.5);
+  background: #d49eff;
+}
+
+.cv-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.cv-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(196, 129, 255, 0.4);
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Photo card styling */
+.cv-photo-card {
+  background: linear-gradient(145deg, rgba(26, 20, 34, 0.7) 0%, rgba(15, 11, 20, 0.85) 100%);
+  border: 1px solid rgba(196, 129, 255, 0.18);
+  border-radius: 20px;
+  padding: 24px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cv-photo-card:hover {
+  border-color: rgba(196, 129, 255, 0.45);
+  box-shadow: 0 20px 50px rgba(196, 129, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+.cv-photo-frame {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 4/5;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(10, 8, 15, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.cv-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.cv-photo-card:hover .cv-photo-frame img {
+  transform: scale(1.04);
+}
+
+.cv-person-name {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #fff;
+}
+
+.cv-person-role {
+  font-size: 13px;
+  color: var(--accentColor, #c481ff);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.cv-meta-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cv-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cv-meta-item svg {
+  color: var(--accentColor, #c481ff);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.cv-quick-skills {
+  background: rgba(20, 16, 26, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.cv-quick-skills h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: #fff;
+}
+
+.cv-quick-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cv-pill {
+  font-size: 11.5px;
+  padding: 4px 10px;
+  background: rgba(196, 129, 255, 0.08);
+  border: 1px solid rgba(196, 129, 255, 0.18);
+  border-radius: 10px;
+  color: #dfd0f4;
+}
+
+/* Mobile Layout: Stacked in requested order:
+   1. Section title
+   2. CV preview
+   3. CV buttons
+   4. Photo
+*/
+@media only screen and (max-width: 1024px) {
+  .cv-section {
+    padding: 60px 15px 40px 15px;
+  }
+  .cv-header h2 {
+    font-size: 36px;
+  }
+  .cv-layout {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .cv-left-col {
+    flex: 1 1 100%;
+    max-width: 100%;
+    order: 1;
+  }
+  .cv-right-col {
+    flex: 1 1 100%;
+    max-width: 100%;
+    order: 2;
+  }
+  .cv-photo-card {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .cv-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+}
